@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100e">
+  <meta name="description" content="Discover S&F premium fragrances. Shop Elysia, Monarch and Sterling with easy WhatsApp ordering.">
+  <title>S&F Perfume Store | Signature Fragrances</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topline">SIGNATURE FRAGRANCES · EXtrait DE PARFUM</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="S&F home"><span class="brand-mark">S<span>&</span>F</span><span class="brand-sub">PERFUME STORE</span></a>
+    <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#collection">Collection</a><a href="#story">Our Story</a><a href="#contact">Contact</a></nav>
+    <button class="cart-trigger" type="button" onclick="openCart()">Bag <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="kicker">THE ART OF PERSONAL SCENT</p>
+        <h1>Leave a<br><em>lasting</em> impression.</h1>
+        <p class="hero-desc">Distinctive fragrances, thoughtfully presented. Find the scent that feels like you.</p>
+        <a class="gold-button" href="#collection">Explore the collection <span>↗</span></a>
+        <div class="hero-note"><span class="line"></span> MADE TO BE REMEMBERED</div>
+      </div>
+      <div class="hero-visual" aria-label="S&F Monarch fragrance">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-image-frame"><img src="images/monarch.png" alt="S&F Monarch perfume bottle and box"></div>
+        <div class="hero-caption"><span>01 / SIGNATURE COLLECTION</span><strong>MONARCH</strong></div>
+      </div>
+      <div class="hero-bottom"><span>SCENT IS YOUR SIGNATURE</span><span>SCROLL TO DISCOVER ↓</span></div>
+    </section>
+
+    <section class="collection section" id="collection">
+      <div class="section-heading"><div><p class="kicker">CURATED FOR YOU</p><h2>The collection</h2></div><p>Three distinctive expressions. Choose your favourite and order directly through WhatsApp.</p></div>
+      <div id="products-grid" class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="story section" id="story">
+      <div class="story-symbol">S<span>&</span>F</div>
+      <div class="story-copy"><p class="kicker">THE S&F APPROACH</p><h2>More than a fragrance.<br><em>A personal signature.</em></h2><p>We believe a fragrance should feel individual, memorable and effortlessly refined. Explore the S&F collection and find the scent that tells your story.</p></div>
+      <div class="story-side"><span>01</span><p>SELECT YOUR SCENT</p><span>02</span><p>ADD TO YOUR BAG</p><span>03</span><p>ORDER ON WHATSAPP</p></div>
+    </section>
+
+    <section class="service-strip"><div><span>01</span><strong>50ML BOTTLES</strong><small>Signature size</small></div><div><span>02</span><strong>WHATSAPP ORDERING</strong><small>Simple and direct</small></div><div><span>03</span><strong>DELIVERY ADVANCE</strong><small>Rs. 250 paid in advance</small></div></section>
+
+    <section class="contact section" id="contact"><p class="kicker">WE'RE HERE TO HELP</p><h2>Found your fragrance?</h2><p>For product questions and orders, message the S&F team.</p><a class="gold-button" href="https://wa.me/923124974060" target="_blank" rel="noopener">Chat with S&F <span>↗</span></a></section>
+  </main>
+
+  <div id="cart-drawer" class="cart-overlay" aria-hidden="true" onclick="if(event.target===this)closeCart()">
+    <aside class="cart-panel" aria-label="Shopping bag">
+      <div class="cart-head"><div><p class="kicker">YOUR SELECTION</p><h2>Your bag</h2></div><button class="close-cart" type="button" onclick="closeCart()" aria-label="Close bag">×</button></div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-summary"><div><span>Products subtotal</span><strong id="cart-total">Rs. 0</strong></div><p>Delivery advance: <strong>Rs. 250</strong></p></div>
+      <form id="order-form" class="order-form">
+        <h3>Delivery details</h3>
+        <input id="customer-name" name="name" placeholder="Full name" autocomplete="name" required>
+        <input id="customer-phone" name="phone" type="tel" placeholder="Phone number" autocomplete="tel" required>
+        <input id="customer-city" name="city" placeholder="City" autocomplete="address-level2" required>
+        <textarea id="customer-address" name="address" placeholder="Complete delivery address" rows="3" autocomplete="street-address" required></textarea>
+        <button class="gold-button submit-order" type="submit">Confirm order on WhatsApp <span>↗</span></button>
+        <small>WhatsApp will open with your order details. Please press Send to place your order.</small>
+      </form>
+    </aside>
+  </div>
+
+  <footer><a class="footer-brand" href="#home">S&F</a><span>© 2026 S&F Perfume Store. All rights reserved.</span><a href="https://wa.me/923124974060" target="_blank" rel="noopener">WHATSAPP ↗</a></footer>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
